@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     this.state = {
       timer: 0
     }
   }
 
-  componenetDidMount() {
+
+  componentDidMount() {
     console.log('componentDidMount method invoked...')
     const incrementTimer = () => this.setState({ timer: this.state.timer + 1 })
     setInterval(incrementTimer, 1000)
